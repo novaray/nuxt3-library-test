@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
-    "element-plus": "^2.2.21"
+    "element-plus": "^2.2.21",
+    "vue-simple-calendar": "^6.2.1"
   }
 }
