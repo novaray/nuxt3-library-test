@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import type { TabsPaneContext } from 'element-plus';
 import {ElTabs, ElTabPane} from 'element-plus';
+interface PageTabProps {
+  tabName: string;
+}
 
-const activeName = ref('first');
+const props = defineProps<PageTabProps>();
 const handleClick = async (tab: TabsPaneContext, event: Event) => {
   await navigateTo(`/${tab.paneName}`);
 }
@@ -10,9 +13,9 @@ const handleClick = async (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <template>
-  <el-tabs v-model="activeName" class="page-tabs" @tab-click="handleClick">
+  <el-tabs v-model="props.tabName" class="page-tabs" @tab-click="handleClick">
+    <el-tab-pane label="index" name="">index</el-tab-pane>
     <el-tab-pane label="Calendar" name="calendar">Calendar</el-tab-pane>
-    <!--<el-tab-pane label="draggable" name="draggable">draggable</el-tab-pane>-->
   </el-tabs>
 </template>
 

@@ -7,11 +7,22 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <BaseCalendar />
+  <div class="calendar-wrapper">
+    <ClientOnly>
+      <BaseCalendar />
+    </ClientOnly>
   </div>
 </template>
 
 <style scoped>
-
+.calendar-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 95vw;
+  min-width: 30rem;
+  max-width: 100rem;
+  min-height: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

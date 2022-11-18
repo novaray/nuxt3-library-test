@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import PageTab from '~/components/PageTab';
+
+const route = useRoute();
+const pathName = ref<string>(route.path.split('/')[1]);
 </script>
 
 <template>
   <div>
-    <PageTab />
+    <PageTab :tab-name="pathName" />
     <slot />
   </div>
 </template>
