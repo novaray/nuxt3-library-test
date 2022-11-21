@@ -137,7 +137,8 @@ const myDateClasses = computed(() => {
   return o;
 });
 const addButtonDisabled = computed(() => {
-  return newItemTitle.value.length === 0 || newItemStartDate.value.length === 0;
+  return newItemTitle.value == null || newItemTitle.value.length === 0 ||
+      newItemStartDate.value == null || newItemStartDate.value.length === 0;
 });
 
 const periodChanged = () => {
@@ -283,8 +284,10 @@ const get21thDayVisible = (date: Date): String => {
         </div>
 
         <el-button
+            type="primary"
             @click="clickTestAddItem"
             :disabled="addButtonDisabled"
+            class="field"
         >
           아이템 추가
         </el-button>
@@ -383,5 +386,9 @@ const get21thDayVisible = (date: Date): String => {
 
 .orange {
   color: orange;
+}
+
+.field {
+  margin-top: 1rem;
 }
 </style>

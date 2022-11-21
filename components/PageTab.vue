@@ -13,9 +13,11 @@ const handleClick = async (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <template>
-  <el-tabs v-model="props.tabName" class="page-tabs" @tab-click="handleClick">
-    <el-tab-pane label="index" name="">index</el-tab-pane>
-    <el-tab-pane label="Calendar" name="calendar">Calendar</el-tab-pane>
+  <el-tabs :model-value="props.tabName" class="page-tabs" @tab-click="handleClick">
+    <el-tab-pane label="index" name=""></el-tab-pane>
+    <el-tab-pane label="Calendar" name="calendar"></el-tab-pane>
+    <el-tab-pane label="Fixed Column" name="fixed-column"></el-tab-pane>
+    <el-tab-pane label="Draggable" name="draggable"></el-tab-pane>
   </el-tabs>
 </template>
 
@@ -24,10 +26,4 @@ const handleClick = async (tab: TabsPaneContext, event: Event) => {
   margin-bottom: 1rem;
 }
 
-.page-tabs > .el-tabs__content {
-  padding: 32px;
-  color: #6b778c;
-  font-size: 32px;
-  font-weight: 600;
-}
 </style>
