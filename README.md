@@ -17,3 +17,10 @@ Vue3용
 ```shell
 npm i -S vuedraggable@next
 ```
+
+## Tree Drag
+다음의 라이브러리를 사용
+- Element Plus의 tree (https://element-plus.org/en-US/component/tree.html)
+- popper.js(https://popper.js.org/)
+- pinia(store) (https://pinia.vuejs.org/)
+- vue-outside-click(https://github.com/andymark-by/click-outside-vue3)
