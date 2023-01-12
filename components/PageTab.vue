@@ -18,6 +18,7 @@ const handleClick = async (tab: TabsPaneContext, event: Event) => {
     <el-tab-pane label="Calendar" name="calendar"></el-tab-pane>
     <el-tab-pane label="Fixed Column" name="fixed-column"></el-tab-pane>
     <el-tab-pane label="Draggable" name="draggable"></el-tab-pane>
+    <el-tab-pane label="Tree Drag" name="tree-drag"></el-tab-pane>
   </el-tabs>
 </template>
 

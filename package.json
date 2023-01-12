@@ -7,6 +7,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "overrides": {
+    "vue": "latest"
+  },
   "devDependencies": {
     "nuxt": "3.0.0",
     "sass": "^1.56.1",
@@ -15,7 +18,11 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
+    "@pinia/nuxt": "^0.4.6",
+    "@popperjs/core": "^2.11.6",
+    "click-outside-vue3": "^4.0.1",
     "element-plus": "^2.2.21",
+    "pinia": "^2.0.28",
     "vue-simple-calendar": "^6.2.1",
     "vuedraggable": "^4.1.0"
   }
