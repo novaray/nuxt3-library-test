@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import * as PopperJs from '@popperjs/core';
-
-const {createPopper} = PopperJs;
+import * as Popper from '@popperjs/core';
 
 interface BaseContextMenuProps {
   visible: boolean;
@@ -36,7 +34,7 @@ const virtualElement = reactive({
 });
 
 const open = () => {
-  popper.value = createPopper(virtualElement as any, popper.value, {
+  popper.value = Popper.createPopper(virtualElement as any, popper.value, {
     placement: 'right-start',
     modifiers: [
       {
