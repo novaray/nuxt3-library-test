@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const popperJs = await import('@popperjs/core').then(lib => lib.default || lib)
-const { createPopper } = popperJs;
+import { createPopper, VirtualElement } from '@popperjs/core';
 
 interface BaseContextMenuProps {
   visible: boolean;
@@ -8,6 +7,7 @@ interface BaseContextMenuProps {
   event: PointerEvent;
   data: any;
 }
+
 interface BaseContextMenuEmits {
   (e: 'click:outside'): void;
 }
@@ -34,7 +34,7 @@ const virtualElement = reactive({
 });
 
 const open = () => {
-  popper.value = createPopper(virtualElement as any, popper.value, {
+  popper.value = createPopper(virtualElement as VirtualElement, popper.value, {
     placement: 'right-start',
     modifiers: [
       {
